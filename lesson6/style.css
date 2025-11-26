@@ -1,0 +1,21 @@
+.mainclass {
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+}
+
+a {
+  text-decoration: none;
+  background-color: burlywood;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-weight: bold;
+}
+
+a:hover {
+  background-color: antiquewhite;
+}
+
+h2 {
+  text-align: center;
+}
