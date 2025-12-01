@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">JavaScript Form</h1>
+    <form id="forma" style="display: grid; gap: 1rem">
+      <label for="cityName">City Name</label>
+      <input
+        type="text"
+        name="cityName"
+        style="padding: 0.75rem; border-radius: 0.5rem"
+      />
+
+      <label for="city"></label>
+      <select name="city" style="padding: 0.75rem; border-radius: 0.5rem">
+        <option value="Turkistan">Turkistan</option>
+        <option value="Shymkent">Shymkent</option>
+        <option value="Almaty">Almaty</option>
+      </select>
+
+      <label for="comment"> Comment </label>
+      <textarea
+        name="comment"
+        style="padding: 0.75rem; border-radius: 0.5rem; resize: vertical"
+      >
+      </textarea>
+
+      <button
+        type="submit"
+        style="padding: 0.75rem; border-radius: 0.5rem; font-weight: bold"
+      >
+        SubmiT
+      </button>
+    </form>
+
+    <script>
+      const form = document.getElementById("forma");
+
+      form.addEventListener("input", (event) => {
+        console.log(
+          `Изменено поле: ${event.target.name}, значение: ${event.target.value}`
+        );
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const dataObj = {};
+
+        formData.forEach((value, key) => {
+          dataObj[key] = value;
+        });
+
+        console.log("Форма целиком:", dataObject);
+      });
+    </script>
+  </body>
+</html>
