@@ -31,11 +31,11 @@ closeModalButtons.forEach((btn) => {
   btn.addEventListener("click", closeModal);
 });
 
-// ------- DZ
+// ------- DZ -- modal
 modalWindows.forEach((window) => {
   window.addEventListener("click", closeModal);
 });
-// ------- DZ
+// ------- DZ -- modal
 
 function openModal(event) {
   modalWindows.forEach((modal) => {
@@ -62,6 +62,8 @@ function closeModal(event) {
 // Аккордионы
 
 const accordions = document.querySelectorAll(".accordion__container");
+
+const accordionHeaderTitles = document.querySelectorAll(".accordion__header");
 
 function toggleAccordion(event) {
   const accordionContainer =
@@ -91,6 +93,44 @@ function toggleAccordion(event) {
     }
   }
 }
+
+// ------- DZ -- accordion
+
+function toggleAccordionByTitles(event) {
+  const accordionContainer =
+    event.target.closest("[accordion-type]") ??
+    event.target.closest(".accordion__container");
+
+  const accordionType =
+    event.target.closest("[accordion-type]")?.getAttribute("accordion-type") ??
+    "multi";
+
+  const isAccordionHeader = event.target.closest("accordion__header");
+
+  if (!isAccordionHeader) {
+    const parentElement = event.target.closest("[accordion-id]");
+    const accordionState = parentElement.getAttribute("accordion-state");
+
+    if (accordionType === "single") {
+      const accordions = accordionContainer.querySelectorAll("[accordion-id]");
+      accordions.forEach((item) => {
+        item.setAttribute("accordion-state", "closed");
+      });
+    }
+
+    if (accordionState === "closed") {
+      parentElement.setAttribute("accordion-state", "open");
+    } else {
+      parentElement.setAttribute("accordion-state", "closed");
+    }
+  }
+}
+
+accordionHeaderTitles.forEach((header) => {
+  header.addEventListener("click", toggleAccordionByTitles);
+});
+
+// ------- DZ -- accordion
 
 accordions.forEach((accordion) => {
   accordion.addEventListener("click", toggleAccordion);
