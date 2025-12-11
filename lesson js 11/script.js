@@ -133,6 +133,7 @@ const userValues = Object.values(user);
 
 // 1. Обмен значениями двух переменных
 // Создать две переменные a и b и поменять их значения местами без использования третьей переменной.
+console.log("======================= 1 ========================");
 
 let a = 12,
   b = 34;
@@ -141,8 +142,6 @@ let a = 12,
 
 console.log(a, b);
 
-console.log("===============================================");
-
 // 2. Проверка чётного или нечётного числа
 // Написать функцию isEven(num), которая возвращает:
 
@@ -150,17 +149,13 @@ console.log("===============================================");
 
 // false — если нечётное
 
+console.log("======================= 2 ========================");
+
 function isEven(num) {
-  if (num % 2 === 0) {
-    console.log("true");
-  } else {
-    console.log("false");
-  }
+  return num % 2 === 0;
 }
 
-isEven(1);
-
-console.log("===============================================");
+console.log(isEven(3));
 
 // 3. Сумма чисел от 1 до N
 // Написать функцию, которая принимает число n и возвращает сумму всех чисел от 1 до n.
@@ -168,19 +163,19 @@ console.log("===============================================");
 // Пример:
 // sumTo(5) → 15
 
+console.log("======================= 3 ========================");
+
 function sumTo(num) {
-  summa = 0;
+  let summa = 0;
 
   for (let index = 1; index <= num; index++) {
     summa += index;
   }
 
-  console.log(summa);
+  return summa;
 }
 
-sumTo(5);
-
-console.log("===============================================");
+console.log(sumTo(5));
 
 // 4. Переворот строки
 // Написать функцию reverseString(str), которая переворачивает строку.
@@ -188,34 +183,26 @@ console.log("===============================================");
 // Пример:
 // "hello" → "olleh"
 
+console.log("======================= 4 ========================");
+
 function reverseString(str) {
-  console.log(Array.from(str).reverse().join(""));
+  return Array.from(str).reverse().join("");
 }
 
-reverseString("hello");
-
-console.log("===============================================");
+console.log(reverseString("hello"));
 
 // 5. Фильтрация массива по чётным числам
 // Написать функцию filterEven(arr), которая возвращает новый массив только с чётными значениями.
 
-let newArr = [];
+console.log("======================= 5 ========================");
 
 function filterEven(arr) {
-  arr.filter((item) => {
-    if (item % 2 === 0) {
-      newArr.push(item);
-    }
-  });
-
-  console.log(newArr);
+  return arr.filter((item) => item % 2 === 0);
 }
 
 let arra = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-filterEven(arra);
-
-console.log("===============================================");
+console.log(filterEven(arra));
 
 // 6. Конвертер температуры
 // Создать 2 функции:
@@ -228,19 +215,19 @@ console.log("===============================================");
 // F = C * 9/5 + 32
 // C = (F - 32) * 5/9
 
-celsiusToFahrenheit(12);
+console.log("======================= 6 ========================");
 
-fahrenheitToCelsius(23);
+console.log(celsiusToFahrenheit(12));
+
+console.log(fahrenheitToCelsius(23));
 
 function celsiusToFahrenheit(c) {
-  console.log((c * 9) / 5 + 32);
+  return (c * 9) / 5 + 32;
 }
 
 function fahrenheitToCelsius(f) {
-  console.log(((f - 32) * 5) / 9);
+  return ((f - 32) * 5) / 9;
 }
-
-console.log("===============================================");
 
 // 7. Проверка строки на палиндром
 // Написать функцию isPalindrome(str), которая:
@@ -255,24 +242,26 @@ console.log("===============================================");
 // "Race car" → true
 // "Hello" → false
 
-isPalindrome("A sa");
+console.log("======================= 7 ========================");
+
+console.log(isPalindrome("A sa"));
 
 function isPalindrome(str) {
-  let lowerStr = str.toLowerCase().replace(" ", "");
+  let lowerStr = str.toLowerCase().replace(/\s+/g, "");
 
-  console.log(
+  return (
     Array.from(lowerStr).join("") === Array.from(lowerStr).reverse().join("")
   );
 }
 
-console.log("===============================================");
-
 // 8. Сумма всех элементов массива (for)
 // Написать функцию sumArray(arr), которая с помощью обычного цикла for возвращает сумму всех чисел массива.
 
+console.log("======================= 8 ========================");
+
 let chiselder = [34, 45, 435, 54, 4, 5, 45];
 
-sumArray(chiselder);
+console.log(sumArray(chiselder));
 
 function sumArray(arr) {
   let summasy = 0;
@@ -282,10 +271,8 @@ function sumArray(arr) {
     summasy += element;
   }
 
-  console.log(summasy);
+  return summasy;
 }
-
-console.log("===============================================");
 
 // 9. Найти самое длинное слово в массиве строк (for…of)
 // Написать функцию longestWord(words), которая с помощью for…of находит самое длинное слово.
@@ -293,10 +280,12 @@ console.log("===============================================");
 // Пример:
 // ["apple", "banana", "kiwi"] → "banana"
 
+console.log("======================= 9 ========================");
+
 let fruits = ["apple", "banana", "kiwi"];
 
-longestWord(fruits);
-longestWord2(fruits);
+console.log(longestWord(fruits));
+console.log(longestWord2(fruits));
 
 function longestWord(words) {
   let maxi = "";
@@ -309,7 +298,7 @@ function longestWord(words) {
     if (element.length > maxi.length) maxi = element;
   }
 
-  console.log(maxi);
+  return maxi;
 }
 
 function longestWord2(words) {
@@ -321,10 +310,8 @@ function longestWord2(words) {
     if (w.length > maxi.length) maxi = w;
   }
 
-  console.log(maxi);
+  return maxi;
 }
-
-console.log("===============================================");
 
 // 10. Подсчитать количество свойств в объекте (for…in)
 // Написать функцию countProps(obj), которая возвращает число ключей объекта.
@@ -332,9 +319,11 @@ console.log("===============================================");
 // Пример:
 // { a: 1, b: 2, c: 3 } → 3
 
+console.log("======================= 10 ========================");
+
 let kluchei = { a: 1, b: 2, c: 3 };
 
-countProps1(kluchei);
+console.log(countProps1(kluchei));
 
 function countProps1(obj) {
   let count = 0;
@@ -343,36 +332,31 @@ function countProps1(obj) {
     if (!Object.hasOwn(obj, key)) continue;
 
     count++;
-
-    const element = obj[key];
-    console.log(key);
   }
 
-  console.log(count);
+  return count;
 }
 
-countProps(kluchei);
+console.log(countProps(kluchei));
 
 function countProps(obj) {
-  console.log(Object.keys(obj).length);
+  return Object.keys(obj).length;
 }
-
-console.log("===============================================");
 
 // 11. Вывести числа от 1 до N (while)
 // Написать функцию printTo(n), которая выводит в консоль числа от 1 до n с помощью цикла while.
+
+console.log("======================= 11 ========================");
 
 printTo(5);
 
 function printTo(n) {
   let i = 1;
-  while (i < n) {
+  while (i <= n) {
     console.log(i);
     i += 1;
   }
 }
-
-console.log("===============================================");
 
 // 12. Найти число в массиве вручную (без includes)
 // Использовать цикл (любой: for, for…of, while).
@@ -385,16 +369,17 @@ console.log("===============================================");
 // Пример:
 // manualFindIndex([1,2,3], 2) → 1
 
-manualFindIndex([1, 2, 3], 2);
+console.log("======================= 12 ========================");
+
+console.log(manualFindIndex([1, 2, 3], 2));
 
 function manualFindIndex(arr, value) {
   for (let index = 0; index < arr.length; index++) {
     const element = arr[index];
 
     if (element === value) {
-      console.log(index);
+      return index;
     }
   }
+  return undefined;
 }
-
-console.log("===============================================");

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Masonry</title>
+
+    <!-- Masonry CDN -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <!-- GLightbox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Gallery</h1>
+    </header>
+
+    <section class="gallery grid">
+      <div class="grid-sizer"></div>
+
+      <a href="img/1.jpg" class="grid-item glightbox">
+        <img src="img/1.jpg" alt="" />
+      </a>
+
+      <a href="img/2.jpg" class="grid-item glightbox">
+        <img src="img/2.jpg" alt="" />
+      </a>
+
+      <a href="img/3.jpg" class="grid-item glightbox tall">
+        <img src="img/3.jpg" alt="" />
+      </a>
+
+      <a href="img/4.jpg" class="grid-item glightbox wide">
+        <img src="img/4.jpg" alt="" />
+      </a>
+
+      <a href="img/5.jpg" class="grid-item glightbox">
+        <img src="img/5.jpg" alt="" />
+      </a>
+
+      <a href="img/6.jpg" class="grid-item glightbox tall">
+        <img src="img/6.jpg" alt="" />
+      </a>
+
+      <a href="img/7.jpg" class="grid-item glightbox">
+        <img src="img/7.jpg" alt="" />
+      </a>
+    </section>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
