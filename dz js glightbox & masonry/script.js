@@ -5,7 +5,6 @@ var msnry = new Masonry(grid, {
   itemSelector: ".grid-item",
   columnWidth: ".grid-sizer",
   percentPosition: true,
-  gutter: 15,
 });
 
 // Init GLightbox
