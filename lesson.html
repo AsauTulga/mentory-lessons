@@ -8,11 +8,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="total">
-      <div class="div2">
+      <div class="div2" data-aos="fade-right">
         <div class="divTitle">
           Total Reven
           <div class="percentDiv"><i class="fa fa-bar-chart"></i> +14.5%</div>
@@ -23,7 +24,8 @@
         </p>
         <p class="textTwo">Victors for last 6 months</p>
       </div>
-      <div class="div2">
+
+      <div class="div2" data-aos="fade-down">
         <div class="divTitle">
           New Customer
           <div class="percentDiv"><i class="fa fa-bar-chart"></i> -14.2%</div>
@@ -34,7 +36,8 @@
         </p>
         <p class="textTwo">Acquisition needs attention</p>
       </div>
-      <div class="div2">
+
+      <div class="div2" data-aos="fade-left">
         <div class="divTitle">
           Active Account
           <div class="percentDiv"><i class="fa fa-bar-chart"></i> +14.3%</div>
@@ -47,28 +50,35 @@
       </div>
     </div>
 
-    <div class="total2">
-      <img
-        src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
-        alt="eye"
-      />
-      <img
-        src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
-        alt="eye"
-      />
-      <img
-        src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
-        alt="eye"
-      />
+    <div data-aos="flip-up">
+      <div class="total2">
+        <img
+          src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          alt="eye"
+        />
+        <img
+          src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          alt="eye"
+        />
+        <img
+          src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+          alt="eye"
+        />
+      </div>
+
+      <div class="total">
+        <div class="div3"><strong>Orange</strong> <span>$5.50</span></div>
+        <div class="div3"><strong>Orange</strong> <span>$5.50</span></div>
+        <div class="div3"><strong>Orange</strong> <span>$5.50</span></div>
+      </div>
     </div>
 
-    <div class="total">
-      <div class="div3"><strong>Orange</strong> <span>$5.50</span></div>
-      <div class="div3"><strong>Orange</strong> <span>$5.50</span></div>
-      <div class="div3"><strong>Orange</strong> <span>$5.50</span></div>
-    </div>
-
-    <div class="loginDiv">
+    <div
+      class="loginDiv"
+      data-aos="fade-up"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+    >
       <div class="formLogin">
         <strong>Login to your Account</strong>
         <p>Enter your email below to login to your account</p>
@@ -89,5 +99,9 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
